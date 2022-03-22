@@ -31,8 +31,7 @@
   margin: auto;
   width: 70%;
   margin-bottom: 20px;
-  /* max-height: 300px; */
-  /* overflow: auto; */
+
   border: 1px solid #aaa;
   transition: 1s all ease-in-out;
 }
@@ -60,12 +59,10 @@
 .collapse {
   text-align: right;
   font-size: 25px;
-  /* color: black; */
 }
 .test {
   cursor: pointer;
   color: green;
-  /* background-color: #333; */
 }
 .orderStatus {
   text-align: center;
@@ -87,6 +84,5 @@
   }
   .orderId {
     font-size: 20px;
-    /* display: none; */
   }
 }

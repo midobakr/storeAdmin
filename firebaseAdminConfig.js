@@ -17,21 +17,3 @@ const db = getFirestore();
 const auth = getAuth();
 
 module.exports = { db, auth };
-// const app = initializeApp(credintials, "ssaax");
-// const db = getFirestore(app);
-// console.log("aaaaaaaa", admin.apps.length);
-//   export { app };
-// }
-// console.log("kkkk", app);
-// export const database = getFirestore(app);
-// export default admin;
-// export const databse = admin.firestore();
-// firebase.initializeApp(
-//   {
-//     credential: firebase.credential.cert(credintials),
-//   },
-//   "adminsp"
-// );
-
-// module.exports = app;
-// export default app;

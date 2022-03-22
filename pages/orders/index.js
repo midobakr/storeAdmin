@@ -9,10 +9,8 @@ import classes from "./myOrders.module.css";
 
 export default function MyOrders({ orders }) {
   const [activeOrder, setActiveOrder] = useState("");
-  console.log("myOrders", orders);
   const updateOrder = async (e, id) => {
     const value = e.target.value;
-    console.log(value, id);
     let res = await fetch("/api/order", {
       method: "POST",
       credentials: "same-origin",
@@ -36,7 +34,6 @@ export default function MyOrders({ orders }) {
               </span>
             </div>
             <div className={classes.orderStatus}>
-              {/* <span className={classes.info}>{order.status}</span> */}
               <select
                 name="sale"
                 className={classes.input}
@@ -155,7 +152,6 @@ export async function getServerSideProps(context) {
   ordersSnapshot.forEach((doc) => {
     orders.push(doc.data());
   });
-  console.log("myOrders", orders);
 
   return { props: { orders: orders } };
 }

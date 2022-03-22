@@ -1,5 +1,4 @@
-/* eslint-disable @next/next/no-img-element */
-import { useState, useRef } from "react";
+import { useRef } from "react";
 import Image from "next/image";
 import classes from "./productDetails.module.css";
 import { AiOutlineClose, AiOutlinePlus } from "react-icons/ai";
@@ -12,26 +11,10 @@ export default function ProductDetails({
   setImages,
   isNew,
 }) {
-  // const [images, setImages] = useState({ ...product.colors });
   const colorRef = useRef();
-
-  // const submit = (e) => {
-  //   e.preventDefault();
-  //   let obj = {};
-  //   const data = new FormData(e.target);
-  //   for (let [key, value] of data.entries()) {
-  //     if (obj[key]) {
-  //       let tmp = [obj[key], value];
-  //       obj[key] = tmp.flat();
-  //     } else {
-  //       obj[key] = value;
-  //     }
-  //   }
-  // };
 
   const addImageToColor = (e, color) => {
     const value = e.target.value;
-    console.log("value= ", value);
     if (!value) {
       return;
     }

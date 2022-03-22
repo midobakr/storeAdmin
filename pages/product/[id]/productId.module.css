@@ -1,8 +1,7 @@
 .container {
-  /* background-color: gray; */
+  color: black !important;
   text-align: center;
   height: 100%;
-  /* border: 2px solid white; */
 }
 .buttonContainer {
   background-color: gray;

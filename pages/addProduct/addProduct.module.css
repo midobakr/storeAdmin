@@ -1,8 +1,6 @@
 .container {
-  /* background-color: gray; */
   text-align: center;
   height: 100%;
-  /* border: 2px solid white; */
 }
 .buttonContainer {
   background-color: gray;
@@ -17,7 +15,6 @@
 }
 @media screen and (min-width: 1000px) {
   .container {
-    /* border: 1px solid red; */
     margin: auto;
     width: 1000px;
   }

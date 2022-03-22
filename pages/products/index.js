@@ -31,7 +31,6 @@ export default function Products({ products }) {
 }
 
 export async function getServerSideProps(context) {
-  // const productId = context.query.id;
   const querySnapshot = await db
     .collection("products")
     .orderBy("lastEditDate", "desc")
@@ -40,6 +39,5 @@ export async function getServerSideProps(context) {
   querySnapshot.forEach((doc) => {
     products.push(doc.data());
   });
-  console.log(products[0]);
   return { props: { products: products } };
 }

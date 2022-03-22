@@ -41,8 +41,7 @@ export default function AddProduct() {
     obj.images = images;
     obj.colors = Object.keys(images);
     obj.keywords = obj.keywords.split(" ");
-    console.log("of", obj);
-    console.log("== \n", images);
+
     let res = await fetch("/api/product", {
       method: "POST",
       credentials: "same-origin",
@@ -51,7 +50,6 @@ export default function AddProduct() {
     });
     const { id } = await res.json();
     router.push(`/product/${id}`);
-    console.log("id=", id);
   };
 
   return (

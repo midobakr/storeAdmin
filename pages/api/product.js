@@ -18,9 +18,8 @@ export default async function handler(req, res) {
       ),
       lastEditDate: +new Date(),
     });
-    console.log(ttt, "aywa hnaaaaaa=", product.id);
     res.status(200).json({ id: productDoc.id });
   } catch (e) {
-    res.status(400).json({ e: e });
+    console.log("e=", e);
   }
 }

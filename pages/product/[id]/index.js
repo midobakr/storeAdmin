@@ -37,7 +37,7 @@ export default function Product({ product }) {
         body: JSON.stringify(obj),
       });
       const { id } = await res.json();
-      // window.location.reload();
+      window.location.reload();
     } catch (e) {
       console.log("e=", e);
     }

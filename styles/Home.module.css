@@ -1,0 +1,41 @@
+.container {
+  text-align: center;
+}
+.welcome {
+  background-color: gray;
+  margin: 0 0 50px 0;
+  padding: 20px;
+}
+.container2 {
+  background-color: black;
+  /* display: flex; */
+  padding: 20px;
+}
+.container2 a {
+  padding: 20px;
+  margin: 10px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  /* width: 50%; */
+  font-size: 30px;
+  background-color: gray;
+}
+.container2 a:hover {
+  background-color: #eee;
+}
+.icon {
+  height: 100px;
+  width: 100px;
+}
+.products {
+  /* height: 200px; */
+  flex-grow: 1;
+  /* background-color: blue; */
+}
+.orders {
+  /* height: 200px; */
+  flex-grow: 1;
+  /* background-color: red; */
+}

@@ -1,0 +1,24 @@
+.container {
+  /* background-color: gray; */
+  text-align: center;
+  height: 100%;
+  /* border: 2px solid white; */
+}
+.buttonContainer {
+  background-color: gray;
+  display: flex;
+  margin-top: 20px;
+}
+.buttonContainer div {
+  flex-grow: 1;
+
+  border: 2px solid black;
+  padding: 20px;
+}
+@media screen and (min-width: 1000px) {
+  .container {
+    /* border: 1px solid red; */
+    margin: auto;
+    width: 1000px;
+  }
+}

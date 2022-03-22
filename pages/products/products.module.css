@@ -1,0 +1,38 @@
+.container {
+  background-color: black;
+}
+.container2 {
+  color: white;
+  display: flex;
+  padding: 0 10px;
+  justify-content: space-between;
+  align-items: center;
+}
+.container2 span {
+  line-height: 25px;
+}
+.icon {
+  cursor: pointer;
+  vertical-align: top;
+  fill: green;
+  width: 25px;
+  height: 25px;
+}
+.welcome {
+  background-color: gray;
+  margin: 0 0 50px 0;
+  padding: 20px;
+  text-align: center;
+}
+.products {
+  list-style: none;
+  padding: 0;
+  /* background-color: white; */
+}
+@media screen and (min-width: 1000px) {
+  .products {
+    margin: auto;
+    margin-top: 30px;
+    width: 1000px;
+  }
+}

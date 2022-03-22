@@ -1,0 +1,105 @@
+.container {
+  text-align: left;
+  border: 1px solid black;
+  color: black;
+}
+
+.item {
+  display: flex;
+  justify-content: flex-start;
+  gap: 10px;
+  border: 1px solid white;
+  padding: 10px;
+}
+.itemLabel {
+  color: darkblue;
+}
+.itemContent {
+  margin-left: 10px;
+}
+.input,
+.input2 {
+  padding: 4px;
+  background-color: black;
+  border: 1px solid white;
+  border-radius: 5px;
+}
+.input2 {
+  width: 100px;
+}
+.input:focus-visible {
+  outline: none;
+}
+.input:disabled {
+  border: none;
+}
+.inputGroupContainer {
+  display: flex;
+  border: 1px solid white;
+  border-radius: 5px;
+  flex-wrap: wrap;
+  width: 50%;
+  margin: auto;
+  justify-content: space-around;
+}
+.inputGroup {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  padding: 5px;
+}
+.linkContainer {
+  padding: 10x;
+}
+.linkContainer li {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  margin-bottom: 10px;
+}
+.linkContainer li span {
+  margin-left: 10px;
+}
+.editImages {
+  border: 1px solid white;
+  padding: 10px;
+}
+.list {
+  margin-left: 20px;
+}
+.list li {
+  display: flex;
+}
+.list li input {
+  width: 100%;
+}
+.iconContainer {
+  display: flex;
+  align-items: center;
+  margin-right: 10px;
+}
+.iconContainer svg {
+  fill: red;
+  cursor: pointer;
+}
+.container7 {
+  display: flex;
+}
+.container10 {
+  display: flex;
+  align-items: flex-end;
+}
+.container8 svg {
+  width: 20px;
+  height: 20px;
+  margin: 0 5px;
+  cursor: pointer;
+  fill: green;
+}
+.container9 {
+  flex-grow: 1;
+  display: flex;
+  margin: 0 20px;
+  flex-direction: row-reverse;
+  align-items: center;
+}

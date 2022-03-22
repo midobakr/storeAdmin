@@ -29,15 +29,18 @@ export default function Product({ product }) {
     obj.id = product.id;
     obj.colors = Object.keys(images);
     obj.keywords = obj.keywords.split(" ");
+    try {
+      let res = await fetch("/api/product", {
+        method: "POST",
+        credentials: "same-origin",
 
-    let res = await fetch("/api/product", {
-      method: "POST",
-      credentials: "same-origin",
-
-      body: JSON.stringify(obj),
-    });
-    const { id } = await res.json();
-    window.location.reload();
+        body: JSON.stringify(obj),
+      });
+      const { id } = await res.json();
+      // window.location.reload();
+    } catch (e) {
+      console.log("e=", e);
+    }
   };
 
   if (edit) {

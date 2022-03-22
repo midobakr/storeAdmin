@@ -16,7 +16,6 @@
 }
 @media screen and (min-width: 1000px) {
   .container {
-    border: 1px solid red;
     margin: auto;
     width: 1000px;
   }

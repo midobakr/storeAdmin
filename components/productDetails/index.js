@@ -11,6 +11,7 @@ export default function ProductDetails({
   setImages,
   isNew,
 }) {
+  console.log("product =", product);
   const colorRef = useRef();
 
   const addImageToColor = (e, color) => {
@@ -65,6 +66,7 @@ export default function ProductDetails({
           className={classes.input}
           disabled={!isNew}
           name="id"
+          placeholder={isNew ? "default will be random id" : ""}
           defaultValue={product.id}
         />
       </div>
@@ -230,12 +232,12 @@ export default function ProductDetails({
                 // eslint-disable-next-line react/jsx-no-comment-textnodes
                 <li key={link}>
                   {/* // eslint-disable-next-line @next/next/no-img-element */}
-                  <Image
+                  <img
                     src={link}
                     alt="photo"
                     width={100}
-                    height={100}
-                    layout="fixed"
+                    // height={100}
+                    // layout="fixed"
                   />
                   <span>{link}</span>
                 </li>

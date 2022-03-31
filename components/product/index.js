@@ -43,6 +43,8 @@ export default function Product({ product }) {
       {expandORcollapse}
       <div className={isActive ? classes.expand : classes.collapse}>
         <div className={classes.groupContainer}>
+          <img src={product.images[product.colors[0]][0]} alt="" width={100} />
+
           <div className={classes.group}>
             <span className={classes.label}>Product Id :</span>
             <span className={classes.content}>{product.id}</span>

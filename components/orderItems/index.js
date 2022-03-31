@@ -1,4 +1,3 @@
-import Image from "next/image";
 import { useRef, useEffect } from "react";
 import classes from "./orderItems.module.css";
 
@@ -18,11 +17,11 @@ export default function OrderItems({ items, active }) {
         {items.map((product, key) => (
           <div key={key} className={classes.product}>
             <div className={classes.image}>
-              <Image
+              <img
                 src={product.image}
                 alt="Vercel Logo"
                 // width={130}
-                // height={130}
+                height={130}
                 layout="fill"
               />
             </div>

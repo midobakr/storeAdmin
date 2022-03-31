@@ -25,7 +25,6 @@ export default function AddProduct() {
   const [images, setImages] = useState({});
 
   const formRef = useRef();
-
   const submit = async () => {
     // setEdit(false);
     let obj = {};
@@ -65,8 +64,9 @@ export default function AddProduct() {
         images={images}
       />
       <div className={classes.buttonContainer}>
-        <div>REMOVE</div>
-        <div onClick={submit}>SAVE</div>
+        <div onClick={submit} style={{ cursor: "pointer" }}>
+          SAVE
+        </div>
       </div>
     </div>
   );

@@ -1,7 +1,8 @@
-import { useState, useEffect } from "react";
+import { useState } from "react";
 import { AiOutlineDownCircle, AiOutlineUpCircle } from "react-icons/ai";
 
 import OrderItems from "../../components/orderItems";
+import SearchBar from "../../components/searchBar";
 
 import { db } from "../../firebaseAdminConfig";
 
@@ -9,6 +10,7 @@ import classes from "./myOrders.module.css";
 
 export default function MyOrders({ orders }) {
   const [activeOrder, setActiveOrder] = useState("");
+  const [ordersList, setOrdersList] = useState(orders);
   const updateOrder = async (e, id) => {
     const value = e.target.value;
     let res = await fetch("/api/order", {
@@ -24,8 +26,10 @@ export default function MyOrders({ orders }) {
   return (
     <div className={classes.container}>
       <h1>My Orders</h1>
+      <SearchBar productsList={orders} setProductList={setOrdersList} />
+
       <div className={classes.ordersContainer}>
-        {orders.map((order) => (
+        {ordersList.map((order) => (
           <div key={order.id} className={classes.order}>
             <div className={classes.orderDetails}>
               <span className={classes.orderId}>{order.id}</span>

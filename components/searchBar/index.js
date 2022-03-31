@@ -1,16 +1,18 @@
-import { useState } from "react";
-
 import classes from "./searchBar.module.css";
-import { MdClose } from "react-icons/md";
 import { AiOutlineSearch } from "react-icons/ai";
-export default function SearchBar() {
-  const [value, setValue] = useState("");
+export default function SearchBar({ productsList, setProductList }) {
   function search(e) {
     e.preventDefault();
   }
-
   const saveInput = (e) => {
-    setValue(e.target.value);
+    const searchValue = e.target.value;
+
+    let tmp = productsList.filter(
+      (ele) =>
+        ele?.name?.toLowerCase().search(searchValue.toLowerCase()) >= 0 ||
+        ele.id.search(searchValue) >= 0
+    );
+    setProductList(tmp);
   };
 
   return (
@@ -19,7 +21,7 @@ export default function SearchBar() {
         type="text"
         placeholder="Search products"
         className={classes.search_field}
-        value={value}
+        // value={value}
         onChange={saveInput}
       ></input>
       <div onClick={search}>

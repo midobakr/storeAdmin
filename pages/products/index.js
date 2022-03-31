@@ -1,3 +1,4 @@
+import { useState } from "react";
 import Link from "next/link";
 import SearchBar from "../../components/searchBar";
 import Product from "../../components/product";
@@ -7,6 +8,7 @@ import { db } from "../../firebaseAdminConfig";
 import classes from "./products.module.css";
 
 export default function Products({ products }) {
+  const [productList, setProductList] = useState(products);
   return (
     <div className={classes.container}>
       <h2 className={classes.welcome}>ALL Products</h2>
@@ -19,10 +21,10 @@ export default function Products({ products }) {
             </a>
           </Link>
         </span>
-        <SearchBar />
+        <SearchBar productsList={products} setProductList={setProductList} />
       </div>
       <ul className={classes.products}>
-        {products.map((item) => (
+        {productList.map((item) => (
           <Product key={item.id} product={item} />
         ))}
       </ul>

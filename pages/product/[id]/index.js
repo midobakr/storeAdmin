@@ -12,7 +12,16 @@ export default function Product({ product }) {
   const formRef = useRef();
 
   let editORsave = "";
+  const remove = async () => {
+    let res = await fetch("/api/remove", {
+      method: "POST",
+      credentials: "same-origin",
+      body: JSON.stringify({ id: product.id }),
+    });
+    const { ok } = await res.json();
 
+    window.location.pathname = "/products";
+  };
   const submit = async () => {
     setEdit(false);
     let obj = {};
@@ -73,7 +82,9 @@ export default function Product({ product }) {
         images={images}
       />
       <div className={classes.buttonContainer}>
-        <div style={{ cursor: "pointer" }}>REMOVE</div>
+        <div style={{ cursor: "pointer" }} onClick={remove}>
+          REMOVE
+        </div>
         {editORsave}
       </div>
     </div>

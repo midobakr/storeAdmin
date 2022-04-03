@@ -33,3 +33,10 @@
   border-radius: 5px 0 0 5px;
   outline: none;
 }
+
+@media screen and (max-width: 800px) {
+  .search_bar {
+    width: 200px;
+    margin-right: 0px;
+  }
+}

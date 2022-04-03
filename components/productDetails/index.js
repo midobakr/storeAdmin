@@ -239,7 +239,7 @@ export default function ProductDetails({
                     // height={100}
                     // layout="fixed"
                   />
-                  <span>{link}</span>
+                  <span className={classes.imgLink}>{link}</span>
                 </li>
               ))}
             </ul>

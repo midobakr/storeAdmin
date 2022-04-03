@@ -1,5 +1,4 @@
 .product {
-  /* padding: 20px; */
   border: 2px solid gray;
   font-weight: bold;
   margin: 10px;
@@ -39,7 +38,6 @@
 .groupContainer {
   padding: 10px;
   display: flex;
-  /* text-align: center; */
   justify-content: center;
   align-items: center;
   gap: 10px;
@@ -47,9 +45,22 @@
 }
 .group {
   border-bottom: 1px solid white;
-  /* border-left: 1px solid white; */
   padding: 10px;
 }
 .group span {
   color: black;
+}
+@media screen and (max-width: 800px) {
+  .productDetails {
+    flex-direction: column;
+    gap: 10px;
+  }
+  .groupContainer {
+    font-size: 14px;
+    /* display: none; */
+    flex-direction: column;
+  }
+  .expand {
+    max-height: 250px;
+  }
 }

@@ -35,8 +35,8 @@ export default function Product({ product }) {
       <Link href={"product/" + product.id}>
         <a>
           <div className={classes.productDetails}>
-            <span>{product.name}</span>
             <span>{product.id}</span>
+            <span>{product.name}</span>
           </div>
         </a>
       </Link>

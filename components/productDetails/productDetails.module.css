@@ -103,3 +103,14 @@
   flex-direction: row-reverse;
   align-items: center;
 }
+
+@media screen and (max-width: 800px) {
+  .imgLink {
+    font-size: 12px;
+  }
+  .linkContainer li {
+    flex-direction: column;
+    margin-bottom: 30px;
+    gap: 10px;
+  }
+}
